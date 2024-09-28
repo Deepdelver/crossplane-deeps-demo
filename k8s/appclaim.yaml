@@ -9,7 +9,7 @@ spec:
       type: backend
       location: local
   parameters:
-    namespace: deeps
+    namespace: git-repos
     image: ttl.sh/crossplane-deeps-demo
     port: 8080
     host: my-repo.deeps.hsh
