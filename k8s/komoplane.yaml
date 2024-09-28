@@ -1,0 +1,17 @@
+apiVersion: helm.crossplane.io/v1beta1
+kind: Release
+metadata:
+  name: komoplane
+spec:
+  # rollbackLimit: 3
+  forProvider:
+    chart:
+      name: komoplane
+      repository: https://helm-charts.komodor.io
+      #version: 2.8.3 ## To use devlopment versions, set ">0.0.0-0"
+    namespace: komoplane
+    values:
+      service:
+        type: LoadBalancer
+  providerConfigRef:
+    name: provider-helm
