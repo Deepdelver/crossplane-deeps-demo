@@ -1,0 +1,15 @@
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: AppClaim
+metadata:
+  name: crossplane-deeps-demo
+spec:
+  id: crossplane-deeps-demo
+  compositionSelector:
+    matchLabels:
+      type: backend
+      location: local
+  parameters:
+    namespace: deeps
+    image: ttl.sh/crossplane-deeps-demo
+    port: 8080
+    host: my-repo.deeps.hsh
