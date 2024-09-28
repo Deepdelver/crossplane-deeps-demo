@@ -10,6 +10,6 @@ spec:
       location: local
   parameters:
     namespace: git-repos
-    image: ttl.sh/crossplane-deeps-demo
+    image: ttl.sh/crossplane-deeps-demo:0.0.3
     port: 8080
     host: my-repo.deeps.hsh
