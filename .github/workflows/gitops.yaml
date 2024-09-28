@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: Deepdelver/crossplane-gh
-          token: ${{ secrets.PAT_TOKEN }}
+          token: $${{ secrets.PAT_TOKEN }}
       - name: Manifest
         run: |
             cp argocd-app.tmpl apps/crossplane-deeps-demo.yaml
@@ -26,6 +26,6 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT_TOKEN }}
+          github_token: $${{ secrets.PAT_TOKEN }}
           repository: Deepdelver/crossplane-gh
           force: true
